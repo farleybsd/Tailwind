@@ -59,3 +59,5 @@ src/index.html
   </h1>
 </body>
 </html>
+
+npx tailwindcss -i  styles.css -o src/css/styles.css --watch

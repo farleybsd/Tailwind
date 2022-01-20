@@ -1,0 +1,19 @@
+npm install tailwindcss@latest postcss@latest autoprefixer@latest
+
+npx tailwindcss init
+
+module.exports = {
+  content: ["./src/**/*.{html,js}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+
+src/styles.css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+Build
+npx tailwindcss-cli@latest build styles.css -o src/css/styles.css

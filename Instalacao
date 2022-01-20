@@ -1,0 +1,61 @@
+1 -> Ter Node.js instalado
+2 -> Criar um projeto em node npm init -y
+3 -> 
+npm uninstall tailwindcss postcss autoprefixer
+npm install tailwindcss@latest postcss@latest autoprefixer@latest
+
+npx tailwindcss init -p
+
+npm uninstall tailwindcss postcss autoprefixer
+npm install tailwindcss@npm:@tailwindcss/postcss7-compat postcss@^7 autoprefixer@^9
+
+4 -> Criar uma pasta src
+5 -> na raiz do projeto no nivel package.json criar styles.css
+6 -> instalado extensoes tailwind -> npx tailwindcss init
+
+// Gerando um Build
+npx tailwindcss build styles.css -o src/css/styles.css
+npx tailwindcss -i  styles.css -o src/css/styles.css --watch
+
+// Patiu Hmtl
+
+// Live Server
+npm install -g live-server
+entra na pasta do projeto 
+live-server src
+
+
+npm install -D tailwindcss
+npm install tailwindcss@latest postcss@latest autoprefixer@latest
+
+tailwind.config.js
+
+module.exports = {
+  content: ["./src/**/*.{html,js}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+
+src/styles.css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+npx tailwindcss build styles.css -o src/css/styles.css
+
+src/index.html
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/dist/output.css" rel="stylesheet">
+</head>
+<body>
+  <h1 class="text-3xl font-bold underline">
+    Hello world!
+  </h1>
+</body>
+</html>

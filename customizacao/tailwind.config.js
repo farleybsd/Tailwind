@@ -1,4 +1,4 @@
-const {colors} = require('tailwindcss/defaultTheme')
+const { colors } = require('tailwindcss/defaultTheme')
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
@@ -11,12 +11,15 @@ module.exports = {
     //   'cel':{'max':'400px'}
     // },
     extend: {
-      colors:{
-        'newblue':'#243C5A',
-        gray:{
+      colors: {
+        'newblue': '#243C5A',
+        gray: {
           ...colors.gray,
-          '900':'#999'
+          '900': '#999'
         }
+      },
+      spacing: {
+        '50':'20rem'
       }
     },
   },
